@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+  }
+  
+  .container{
+    width:720px;
+    height:720px;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    margin:auto;
+    border-radius:50%; 
+    border: 1px solid rgb(255, 253, 253);
+    box-shadow:  0px 0px 10px 10px rgb(83, 80, 80);
+    background-image: url("./img/5th.jpg");
+    background-size: contain;
+    background-repeat:round; 
+  }
+  .time{
+    border: 1px solid rgb(81, 83, 81);
+    background-color:rgb(12, 10, 10);
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size:400%;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    display: flex;
+    justify-content: center;
+    box-shadow:  0px 0px 10px 5px rgb(0, 0, 0);
+
+}
+  .circle{
+    width:50px;
+    height:50px;
+    background:rgb(0, 0, 0);
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 60s linear infinite;
+  }
+  
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-360px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-360px)
+                rotate(360deg);
+    }
+  }
+  
+
+
+
+  .text-white{
+    color: white;
+  }
+  .mx-5{
+    margin:  0 10px;
+  }
+  .font-family{
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+  sup{
+    font-size:large;
+  }

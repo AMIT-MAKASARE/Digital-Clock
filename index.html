@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="time text-white">
+        <div id="hr"></div>
+        <label>:</label>
+        <div id="min">:</div>
+        <label for="">:</label>
+        <div id="sec"></div>
+        <sup id="sup">pm</sup>
+      </div>
+
+      <div class="circle"></div>
+    </div>
+    <script>
+      let hr = document.getElementById("hr");
+      let min = document.getElementById("min");
+      let sec = document.getElementById("sec");
+
+      setInterval(() => {
+        let now = new Date();
+
+        hr.innerHTML = (now.getHours() < 10 ? "0" : "") + now.getHours();
+        min.innerHTML = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
+        sec.innerHTML = (now.getSeconds() < 10 ? "0" : "") + now.getSeconds();
+      }, 1000);
+    </script>
+  </body>
+</html>
